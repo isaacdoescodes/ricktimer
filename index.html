@@ -5,31 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Rick Timer</title>
+    <title>Rick Timer - Checking Permissions</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 600px;
+        }
+
+        html {
+            display: grid;
+            place-items: center;
+            height: 100%;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            position: absolute;
+            right: 215px;
+            top: 10px;
+            animation: bounce .5s infinite;
+        }
+
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        @keyframes bounce {
+            5% {
+                transform: translateY(0px) rotate(-135deg);
+            }
+            95% {
+                transform: translateY(20px) rotate(-135deg);
+            }
+        }
+    </style>
+    <script>
+        window.open("app/");
+    </script>
 </head>
 
 <body>
-    <div class="manual" id="manual">
-        <h1>Rick Timer</h1>
-        <h4>Will launch a rickroll after a specified time, even when window is minimized. Usefull for pranking someone.
-        </h4>
-        <h3>
-            NOTE: You MUST enable popups. If on chrome go to the padlock then [site settings] then find popups and change[blocked] to [allow]
-        </h3>
+    <div class="arrow up"></div>
+    <h3>Rick Timer</h3>
+    <h1>If nothing happens enable popup windows.</h1>
+    <h3>If on chrome there should be a icon with a red x on the right of the address bar, click it and do 'always allow'
+    </h3>
+    <button onclick="window.location=''">Try Again</button>
 
-        Timer length: <input id="time" placeholder="60" />seconds
-        <br><br>
-        <button onclick="starttimer(document.getElementById('time').value);">Start RickTimer</button><br>
-        This was made IsaacDoesCodes. It would make him very gratefull if you <a
-            href="https://www.tiktok.com/@isaacdoescodes">followed him on tiktok</a>
-        <h3>After starting timer <i>MINIMIZE</i> the window</h3>
-    </div>
-    <script async src="//static.getclicky.com/101368015.js"></script>
-    <noscript>
-        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101368015ns.gif" /></p>
-    </noscript>
+    <h2>Also note you cannot do this on a phone or ipad!</h2>
 </body>
 
 </html>
