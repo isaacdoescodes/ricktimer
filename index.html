@@ -5,58 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Rick Timer</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        .manual {
-            width: 100%;
-            max-width: 75ch;
-            margin: auto;
-        }
-
-        #time {
-            text-align: right;
-            padding: 10px;
-            width: 50px;
-        }
-
-        button {
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
-    <script>
-        function starttimer(secs) {
-                if (secs == "") {
-                    secs = 60
-                }
-                var lol = confirm("Click 'OK' if you have enabled popup windows. Press 'Cancel' if you haven't and then go do so.");
-                document.title = "New Tab";
-                document.getElementById("manual").style.display = "none"
-                window.setTimeout(() => {
-                    window.open("https://www.youtube.com/watch?v=a3Z7zEc7AXQ")
-                }, (secs - 1) * 1000)
-            }
-    </script>
     <div class="manual" id="manual">
         <h1>Rick Timer</h1>
         <h4>Will launch a rickroll after a specified time, even when window is minimized. Usefull for pranking someone.
         </h4>
-        <h3><strong>NOTE: </strong>
-            You MUST enable popups. If on chrome go to the padlock then [site settings] then find popups and change
-            [blocked]
-            to [allow]</h3>
+        <h3>
+            NOTE: You MUST enable popups. If on chrome go to the padlock then [site settings] then find popups and change[blocked] to [allow]
+        </h3>
 
         Timer length: <input id="time" placeholder="60" />seconds
         <br><br>
         <button onclick="starttimer(document.getElementById('time').value);">Start RickTimer</button><br>
-            This was made IsaacDoesCodes. It would make him very gratefull if you <a
-                href="https://www.tiktok.com/@isaacdoescodes">followed him on tiktok</a>
+        This was made IsaacDoesCodes. It would make him very gratefull if you <a
+            href="https://www.tiktok.com/@isaacdoescodes">followed him on tiktok</a>
         <h3>After starting timer <i>MINIMIZE</i> the window</h3>
     </div>
     <script async src="//static.getclicky.com/101368015.js"></script>
