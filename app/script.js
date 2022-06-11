@@ -5,7 +5,7 @@ function starttimer(secs) {
     document.title = "New Tab";
     document.getElementById("manual").style.display = "none";
     window.setTimeout(() => {
-        window.open("https://www.youtube.com/watch?v=a3Z7zEc7AXQ")
+        window.location = "https://www.youtube.com/watch?v=a3Z7zEc7AXQ"
     }, (secs - .5) * 1000)
 }
 localStorage.worked = true;
